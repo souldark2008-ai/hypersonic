@@ -3,571 +3,700 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>高超音速导弹综述</title>
+  <title>三国高超音速导弹综述</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    三国高超音速导弹综述
+  </header>
 
-  <div class="app-container">
-    <aside id="sidebar">
-      <div class="sidebar-header">
-        <div class="sidebar-title">⚡ 高超音速综述</div>
-      </div>
-      <nav>
+  <!-- 侧边导航栏 -->
+  <nav id="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="#intro">引言</a></li>
+      <li>
+        <a href="#usa">美国 (USA)</a>
         <ul>
-          <li><a href="#intro" class="nav-link">引言</a></li>
-          <li>
-            <a href="#usa" class="nav-link">🇺🇸 美国 (USA)</a>
-            <ul>
-              <li><a href="#usa-development" class="nav-link">发展脉络</a></li>
-              <li><a href="#usa-systems" class="nav-link">代表系统</a></li>
-              <li><a href="#usa-parameters" class="nav-link">公开参数</a></li>
-              <li><a href="#usa-status" class="nav-link">现状评估</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#china" class="nav-link">🇨🇳 中国 (China)</a>
-            <ul>
-              <li><a href="#china-development" class="nav-link">发展脉络</a></li>
-              <li><a href="#china-systems" class="nav-link">代表系统</a></li>
-              <li><a href="#china-parameters" class="nav-link">公开参数</a></li>
-              <li><a href="#china-status" class="nav-link">现状评估</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#russia" class="nav-link">🇷🇺 俄罗斯 (Russia)</a>
-            <ul>
-              <li><a href="#russia-development" class="nav-link">发展脉络</a></li>
-              <li><a href="#russia-systems" class="nav-link">代表系统</a></li>
-              <li><a href="#russia-parameters" class="nav-link">公开参数</a></li>
-              <li><a href="#russia-status" class="nav-link">现状评估</a></li>
-            </ul>
-          </li>
-          <li><a href="#comparison" class="nav-link">📊 横向对比分析</a></li>
-          <li><a href="#other" class="nav-link">🌍 其他国家项目</a></li>
-          <li><a href="#references" class="nav-link">📚 参考文献</a></li>
+          <li><a href="#usa-development">发展脉络</a></li>
+          <li><a href="#usa-systems">技术路线与代表系统</a></li>
+          <li><a href="#usa-parameters">公开参数</a></li>
+          <li><a href="#usa-status">现状评估</a></li>
         </ul>
-      </nav>
-    </aside>
-
-    <main id="content">
-      <div class="content-wrapper">
-        <h1 id="intro">引言</h1>
-        <p>
-          高超音速武器（Hypersonic Weapons）通常指飞行速度超过
-          5&nbsp;倍音速（Mach&nbsp;5）并可在大气层内机动的武器系统。按照推进方式，可分为两类：
-          <strong>高超音速滑翔载具</strong>（HGV, Hypersonic&nbsp;Glide&nbsp;Vehicle）和
-          <strong>高超音速巡航导弹</strong>（HCM, Hypersonic&nbsp;Cruise&nbsp;Missile）。HGV
-          通常由火箭助推至高空后释放滑翔弹头，利用大气层边界的升力进行长距离滑翔；HCM
-          则采用助推段加速后启动超燃冲压发动机，在大气层内持续高速巡航。这两种武器以高速、机动和难以预测的轨迹著称，给传统导弹预警与防御带来巨大挑战<sup id="fnref1"><a href="#fn1">[1]</a></sup><sup id="fnref2"><a href="#fn2">[2]</a></sup>。
-        </p>
-        <p>
-          本综述结合公开来源（OSINT），以中立客观的态度梳理美国、中国、俄罗斯三国在高超音速导弹领域的研究进展、技术路线、公开参数及现状评估，并对其他具备类似技术储备的国家进行简要介绍。全文保持术语一致，区分不同来源中【事实】、【判断】和【推测】三类陈述；凡有公开数据均提供可追溯的参考文献。
-        </p>
-
-        <h2 id="usa">美国 (USA)</h2>
-        <h3 id="usa-development">发展脉络</h3>
-        <p>
-          美国在高超音速武器研究方面起步较早。下列时间点概述了其主要发展脉络：
-        </p>
+      </li>
+      <li>
+        <a href="#china">中国 (China)</a>
         <ul>
-          <li>
-            <strong>2003–2015</strong>：国防高级研究计划局（DARPA）和美国空军开展
-            FALCON&nbsp;HTV‑2 和 X‑51A “Waverider” 等项目，探索高超滑翔体和超燃冲压发动机。X‑51A
-            在 2013 年第四次试飞中成功实现 210&nbsp;秒持续燃烧，速度约 Mach&nbsp;5。
-          </li>
-          <li>
-            <strong>2017–2019</strong>：面对中俄技术突破，美军将高超音速武器列为优先发展项目，启动多项计划——包括空军的
-            AGM‑183A&nbsp;ARRW（Air‑launched Rapid Response Weapon）和原本的 HCSW（后取消），以及陆军/海军联合的
-            LRHW “Dark&nbsp;Eagle” 与 CPS（Conventional Prompt Strike），并确定采用通用滑翔弹头（C‑HGB）
-            <sup id="fnref3"><a href="#fn3">[3]</a></sup>。
-          </li>
-          <li>
-            <strong>2019–2022</strong>：ARRW
-            原型弹从 2019 年开始飞行测试，经历多次失败后于 2022 年才实现三次成功试射；陆军/海军的 C‑HGB
-            在 2020 年首次全程试射成功，但 2021 年测试中出现助推器故障，需要重新验证。
-          </li>
-          <li>
-            <strong>2023–2025</strong>：2023 年空军决定结束 ARRW 研发，转而将资源投向正在与澳大利亚合作的
-            HACM（Hypersonic Attack Cruise Missile）。陆军的 LRHW
-            于 2024 年完成末端一体化试射，目标在 2025 财年形成首个作战连；海军 CPS
-            计划在 2025 年完成首次全系统试飞，2027 年在朱姆沃尔特级驱逐舰上部署。
-          </li>
+          <li><a href="#china-development">发展脉络</a></li>
+          <li><a href="#china-systems">技术路线与代表系统</a></li>
+          <li><a href="#china-parameters">公开参数</a></li>
+          <li><a href="#china-status">现状评估</a></li>
         </ul>
-
-        <h3 id="usa-systems">技术路线与代表系统</h3>
-        <p>美国的高超武器主要分为滑翔载具（HGV）和吸气式巡航导弹（HCM）两类，主要代表如下：</p>
+      </li>
+      <li>
+        <a href="#russia">俄罗斯 (Russia)</a>
         <ul>
-          <li>
-            <strong>AGM‑183A&nbsp;ARRW</strong>（空射快速反应武器，HGV）：由 B‑52H 挂载，采用火箭助推+滑翔弹头方案。
-            设计速度 Mach&nbsp;6.5–8，射程约 1,600&nbsp;km；2022 年完成三次成功飞行后研发结束
-            <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
-          </li>
-          <li>
-            <strong>LRHW “暗鹰”</strong>（陆基远程高超音速武器，HGV）：陆军使用机动发射车搭载两级固体火箭和
-            C‑HGB 滑翔弹头。射程约 2,775–3,500&nbsp;km，飞行时间 < 20 分钟；每枚弹头战斗部仅约 13&nbsp;kg，用高速动能杀伤目标
-            <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
-          </li>
-          <li>
-            <strong>CPS</strong>（常规快速打击，HGV）：海军版 LRHW，采用相同的 C‑HGB 弹头和助推器，由垂直发射装置发射。
-            首批部署计划在朱姆沃尔特级驱逐舰和弗吉尼亚级潜艇 Block&nbsp;V 上，预计 2027 年实现初始作战能力
-            <sup id="fnref5"><a href="#fn5">[5]</a></sup>。
-          </li>
-          <li>
-            <strong>HAWC/HACM</strong>（高超音速巡航导弹项目，HCM）：DARPA 和空军的 HAWC
-            验证了 Mach&nbsp;5–6 级超燃冲压发动机，HACM
-            在此基础上发展实用化巡航导弹，可由 F‑15EX 等战机携带，射程预计数百至上千公里
-            <sup id="fnref6"><a href="#fn6">[6]</a></sup><sup id="fnref7"><a href="#fn7">[7]</a></sup>。
-          </li>
-          <li>
-            <strong>其它探索</strong>：包括 DARPA 的 Tactical&nbsp;Boost&nbsp;Glide、Mayhem 项目等，用于验证不同气动布局和组合动力。
-          </li>
+          <li><a href="#russia-development">发展脉络</a></li>
+          <li><a href="#russia-systems">技术路线与代表系统</a></li>
+          <li><a href="#russia-parameters">公开参数</a></li>
+          <li><a href="#russia-status">现状评估</a></li>
         </ul>
+      </li>
+      <li><a href="#comparison">横向对比分析</a></li>
+      <li><a href="#other">其他国家项目</a></li>
+      <li><a href="#references">参考文献</a></li>
+    </ul>
+  </nav>
 
-        <h3 id="usa-parameters">公开参数与性能</h3>
-        <p>美国高超武器的公开性能数据有限，以下根据公开资料总结主要指标范围：</p>
-        <ul>
-          <li>
-            <strong>速度</strong>：大多设计在 Mach&nbsp;5–10 区间。ARRW
-            中段平均速度约 Mach&nbsp;6.5–8；LRHW 根据 3,500&nbsp;km/20&nbsp;分钟可推算平均速度约 Mach&nbsp;10；HAWC/HACM
-            属于 Mach&nbsp;5–6 级巡航。
-          </li>
-          <li>
-            <strong>射程</strong>：ARRW 约 1,600&nbsp;km；LRHW 2,775–3,500&nbsp;km；CPS
-            与 LRHW 类似；HACM 射程官方未公布，预计为几百至上千公里。
-          </li>
-          <li>
-            <strong>弹头</strong>：均为常规战斗部，以高速动能为主。LRHW 的战斗部仅 13&nbsp;kg 炸药，靠动能碎片毁伤；ARRW
-            可能采用高爆穿透弹头。美国不为高超武器配备核弹头，这是其与中俄的主要差异之一
-            <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
-          </li>
-          <li>
-            <strong>制导</strong>：采用惯性导航+GPS 校正，部分方案未来将结合雷达或红外末端寻的；由于高速飞行产生等离子屏障，末制导技术仍在攻关。
-          </li>
-        </ul>
+  <!-- 主内容 -->
+  <main id="content">
+    <h1 id="intro">引言</h1>
+    <p>
+      高超音速武器（Hypersonic Weapons）通常指飞行速度超过
+      5&nbsp;倍音速（Mach&nbsp;5）并可在大气层内机动的武器系统。按照推进方式，可分为两类：
+      <strong>高超音速滑翔载具</strong>（HGV, Hypersonic&nbsp;Glide&nbsp;Vehicle）和
+      <strong>高超音速巡航导弹</strong>（HCM, Hypersonic&nbsp;Cruise&nbsp;Missile）。HGV
+      通常由火箭助推至高空后释放滑翔弹头，利用大气层边界的升力进行长距离滑翔；HCM
+      则采用助推段加速后启动超燃冲压发动机，在大气层内持续高速巡航。这两种武器以高速、机动和难以预测的轨迹著称，给传统导弹预警与防御带来巨大挑战<sup id="fnref1"><a href="#fn1">[1]</a></sup><sup id="fnref2"><a href="#fn2">[2]</a></sup>。
+    </p>
+    <p>
+      本综述结合公开来源（OSINT），以中立客观的态度梳理美国、中国、俄罗斯三国在高超音速导弹领域的研究进展、技术路线、公开参数及现状评估，并对其他具备类似技术储备的国家进行简要介绍。全文保持术语一致，区分不同来源中【事实】、【判断】和【推测】三类陈述；凡有公开数据均提供可追溯的参考文献。
+    </p>
 
-        <h3 id="usa-status">现状评估</h3>
-        <p>
-          截至 2025 年末，美国没有正式列装的高超音速武器，主要计划处于试验或原型部署阶段。整体技术成熟度可粗略归类为 TRL 6–7：ARRW
-          虽完成原型飞行但已被取消；LRHW
-          在 2024 年完成末端一体化试验，接近 TRL&nbsp;8；CPS
-          尚在系统测试阶段；HACM 仍处开发中。美军侧重常规精确打击，在热防护、超燃冲压和末端制导等方面仍面临技术挑战。由于单价高昂和产能限制，美国短期内只能部署少量原型，用于战术评估。
-        </p>
+    <!-- 美国部分 -->
+    <h2 id="usa">美国 (USA)</h2>
+    <h3 id="usa-development">发展脉络</h3>
+    <p>
+      美国在高超音速武器研究方面起步较早。下列时间点概述了其主要发展脉络：
+    </p>
+    <ul>
+      <li>
+        <strong>2003–2015</strong>：国防高级研究计划局（DARPA）和美国空军开展
+        FALCON&nbsp;HTV‑2 和 X‑51A “Waverider” 等项目，探索高超滑翔体和超燃冲压发动机。X‑51A
+        在 2013 年第四次试飞中成功实现 210&nbsp;秒持续燃烧，速度约 Mach&nbsp;5【三【3†L31-L39】】。
+      </li>
+      <li>
+        <strong>2017–2019</strong>：面对中俄技术突破，美军将高超音速武器列为优先发展项目，启动多项计划——包括空军的
+        AGM‑183A&nbsp;ARRW（Air‑launched Rapid Response Weapon）和原本的 HCSW（后取消），以及陆军/海军联合的
+        LRHW “Dark&nbsp;Eagle” 与 CPS（Conventional Prompt Strike），并确定采用通用滑翔弹头（C‑HGB）
+        <sup id="fnref3"><a href="#fn3">[3]</a></sup>。
+      </li>
+      <li>
+        <strong>2019–2022</strong>：ARRW
+        原型弹从 2019 年开始飞行测试，经历多次失败后于 2022 年才实现三次成功试射；陆军/海军的 C‑HGB
+        在 2020 年首次全程试射成功，但 2021 年测试中出现助推器故障，需要重新验证。
+      </li>
+      <li>
+        <strong>2023–2025</strong>：2023 年空军决定结束 ARRW 研发，转而将资源投向正在与澳大利亚合作的
+        HACM（Hypersonic Attack Cruise Missile）。陆军的 LRHW
+        于 2024 年完成末端一体化试射，目标在 2025 财年形成首个作战连；海军 CPS
+        计划在 2025 年完成首次全系统试飞，2027 年在朱姆沃尔特级驱逐舰上部署。
+      </li>
+    </ul>
 
-        <h2 id="china">中国 (China)</h2>
-        <h3 id="china-development">发展脉络</h3>
-        <p>中国在高超音速武器方面的起步相对保密，通过各类情报可梳理出以下时间节点：</p>
-        <ul>
-          <li>
-            <strong>2000s</strong>：国内高校和军工单位开展高超声速风洞和材料研究，据美方估计，中国在 2007 年首次进行高超飞行试验
-            <sup id="fnref8"><a href="#fn8">[8]</a></sup>。
-          </li>
-          <li>
-            <strong>2014–2016</strong>：被西方称为 WU‑14 或 DF‑ZF 的滑翔体进行多次试射，美方推测其速度可达
-            Mach&nbsp;5–10。中国官方未正式披露试验，但普遍认为这一系列试验孕育了东风‑17 弹头
-            <sup id="fnref9"><a href="#fn9">[9]</a></sup>。
-          </li>
-          <li>
-            <strong>2019</strong>：东风‑17 (DF‑17) 首次在国庆阅兵亮相，被称为中程高超音速滑翔导弹；外界估计其射程约
-            1,800–2,500&nbsp;km。
-          </li>
-          <li>
-            <strong>2021</strong>：外媒报道称中国进行了一次部分轨道轰炸系统 (FOBS) 试验，将高超滑翔器送入轨道绕地飞行并再入攻击靶场，此举引发国际关注
-            <sup id="fnref10"><a href="#fn10">[10]</a></sup>。
-          </li>
-          <li>
-            <strong>2022–2025</strong>：持续推进多型号研发，包括“星空‑2”乘波体高超飞行器试验（2018
-            年达成 Mach&nbsp;6），以及可能存在的远程 DF‑27
-            和空射高超导弹项目。官方仍未公开详细参数，外界判断 DF‑17 已装备火箭军并形成作战能力。
-          </li>
-        </ul>
+    <h3 id="usa-systems">技术路线与代表系统</h3>
+    <p>美国的高超武器主要分为滑翔载具（HGV）和吸气式巡航导弹（HCM）两类，主要代表如下：</p>
+    <ul>
+      <li>
+        <strong>AGM‑183A&nbsp;ARRW</strong>（空射快速反应武器，HGV）：由 B‑52H 挂载，采用火箭助推+滑翔弹头方案。
+        设计速度 Mach&nbsp;6.5–8，射程约 1,600&nbsp;km；2022 年完成三次成功飞行后研发结束
+        <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
+      </li>
+      <li>
+        <strong>LRHW “暗鹰”</strong>（陆基远程高超音速武器，HGV）：陆军使用机动发射车搭载两级固体火箭和
+        C‑HGB 滑翔弹头。射程约 2,775–3,500&nbsp;km，飞行时间 < 20 分钟；每枚弹头战斗部仅约 13&nbsp;kg，用高速动能杀伤目标
+        <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
+      </li>
+      <li>
+        <strong>CPS</strong>（常规快速打击，HGV）：海军版 LRHW，采用相同的 C‑HGB 弹头和助推器，由垂直发射装置发射。
+        首批部署计划在朱姆沃尔特级驱逐舰和弗吉尼亚级潜艇 Block&nbsp;V 上，预计 2027 年实现初始作战能力
+        <sup id="fnref5"><a href="#fn5">[5]</a></sup>。
+      </li>
+      <li>
+        <strong>HAWC/HACM</strong>（高超音速巡航导弹项目，HCM）：DARPA 和空军的 HAWC
+        验证了 Mach&nbsp;5–6 级超燃冲压发动机，HACM
+        在此基础上发展实用化巡航导弹，可由 F‑15EX 等战机携带，射程预计数百至上千公里
+        <sup id="fnref6"><a href="#fn6">[6]</a></sup><sup id="fnref7"><a href="#fn7">[7]</a></sup>。
+      </li>
+      <li>
+        <strong>其它探索</strong>：包括 DARPA 的 Tactical&nbsp;Boost&nbsp;Glide、Mayhem 项目等，用于验证不同气动布局和组合动力。
+      </li>
+    </ul>
 
-        <h3 id="china-systems">技术路线与代表系统</h3>
-        <p>中国的高超音速项目涵盖滑翔载具和巡航导弹两类，代表系统包括：</p>
-        <ul>
-          <li>
-            <strong>东风‑17</strong>（DF‑17，HGV）：中程机动发射的滑翔导弹，采用固体火箭助推和楔形滑翔弹头，射程估计 1,800–2,500&nbsp;km，可携常规或小型核弹头；被普遍认为已部署
-            <sup id="fnref9"><a href="#fn9">[9]</a></sup>。
-          </li>
-          <li>
-            <strong>DF‑27/DF‑41 改进型</strong>（推测，HGV）：外界猜测中国正在研发更远程的高超滑翔弹头，可能用于 DF‑26 或 DF‑41 弹道导弹；目前无公开细节
-            <sup id="fnref12"><a href="#fn12">[12]</a></sup>。
-          </li>
-          <li>
-            <strong>DF‑ZF/WU‑14</strong>（HGV）：2014–2016 年试验的滑翔弹头名称，被认为是 DF‑17 弹头的实验代号。
-          </li>
-          <li>
-            <strong>星空‑2</strong>（Starry&nbsp;Sky‑2，乘波体试验器）：2018 年试飞，采用乘波体气动布局和火箭推进，达到
-            Mach&nbsp;6。该试验验证了新型气动外形和材料，为未来空射或舰载 HGV 提供技术储备
-            <sup id="fnref11"><a href="#fn11">[11]</a></sup>。
-          </li>
-          <li>
-            <strong>凌云</strong>（Lingyun，高超音速巡航导弹概念）：2018 年公开的模型，使用超燃冲压发动机，设计速度
-            Mach&nbsp;6 以上。外界认为这是高超巡航导弹技术验证平台，尚无服役时间表
-            <sup id="fnref13"><a href="#fn13">[13]</a></sup>。
-          </li>
-          <li>
-            <strong>空射/舰载高超导弹</strong>（推测）：多家情报机构称中国在研制空射高超滑翔器，可能由轰‑6K
-            或新型轰炸机发射；此外，潜艇或水面舰艇搭载高超导弹的传闻也在流传。目前缺乏公开证据
-            <sup id="fnref12"><a href="#fn12">[12]</a></sup>。
-          </li>
-        </ul>
+    <h3 id="usa-parameters">公开参数与性能</h3>
+    <p>美国高超武器的公开性能数据有限，以下根据公开资料总结主要指标范围：</p>
+    <ul>
+      <li>
+        <strong>速度</strong>：大多设计在 Mach&nbsp;5–10 区间。ARRW
+        中段平均速度约 Mach&nbsp;6.5–8；LRHW 根据 3,500&nbsp;km/20&nbsp;分钟可推算平均速度约 Mach&nbsp;10；HAWC/HACM
+        属于 Mach&nbsp;5–6 级巡航。
+      </li>
+      <li>
+        <strong>射程</strong>：ARRW 约 1,600&nbsp;km；LRHW 2,775–3,500&nbsp;km；CPS
+        与 LRHW 类似；HACM 射程官方未公布，预计为几百至上千公里。
+      </li>
+      <li>
+        <strong>弹头</strong>：均为常规战斗部，以高速动能为主。LRHW 的战斗部仅 13&nbsp;kg 炸药，靠动能碎片毁伤；ARRW
+        可能采用高爆穿透弹头。美国不为高超武器配备核弹头，这是其与中俄的主要差异之一
+        <sup id="fnref4"><a href="#fn4">[4]</a></sup>。
+      </li>
+      <li>
+        <strong>制导</strong>：采用惯性导航+GPS 校正，部分方案未来将结合雷达或红外末端寻的；由于高速飞行产生等离子屏障，末制导技术仍在攻关。
+      </li>
+    </ul>
 
-        <h3 id="china-parameters">公开参数与性能</h3>
-        <p>中国官方对高超音速武器的具体性能讳莫如深，公开参数主要来自国外情报推测：</p>
-        <ul>
-          <li>
-            <strong>速度</strong>：DF‑17 和 DF‑ZF 的滑翔段速度估计在 Mach&nbsp;5–10；星空‑2 试验达到 Mach&nbsp;6；有报道宣称中国洲际 HGV
-            速度可达 Mach&nbsp;20 以上，但尚无权威证实。
-          </li>
-          <li>
-            <strong>射程</strong>：DF‑17 约 1,800–2,500&nbsp;km；猜测中的 DF‑27/FOBS
-            可实现数千至全球距离。中国 HCM 的射程尚不明确。
-          </li>
-          <li>
-            <strong>弹头</strong>：中国高超导弹可能具有核常兼容能力。DF‑17
-            的常规弹头推测为几百公斤级高爆战斗部，用于区域拒止；如换装小型核弹，则可对战略目标实施快速打击。
-          </li>
-          <li>
-            <strong>制导</strong>：采用惯性导航和北斗卫星导航进行中段校正。有学者提出未来会加入红外或雷达末端制导，以打击移动海上目标。
-          </li>
-        </ul>
+    <h3 id="usa-status">现状评估</h3>
+    <p>
+      截至 2025 年末，美国没有正式列装的高超音速武器，主要计划处于试验或原型部署阶段。整体技术成熟度可粗略归类为 TRL 6–7：ARRW
+      虽完成原型飞行但已被取消；LRHW
+      在 2024 年完成末端一体化试验，接近 TRL&nbsp;8；CPS
+      尚在系统测试阶段；HACM 仍处开发中。美军侧重常规精确打击，在热防护、超燃冲压和末端制导等方面仍面临技术挑战。由于单价高昂和产能限制，美国短期内只能部署少量原型，用于战术评估。
+    </p>
 
-        <h3 id="china-status">现状评估</h3>
-        <p>
-          截至 2025 年底，中国是世界上首个公开部署高超音速滑翔导弹的国家。DF‑17
-          被认为已经装备火箭军多个机动旅，形成作战值班能力；其它型号（如远程 HGV、凌云 HCM）处于研发或验证阶段。中国在高超音速风洞和材料方面投入巨大，具有强大的试验基础，但对高超导弹的精确制导和全球预警能力仍相对有限。总体上，中国高超项目的技术成熟度从 TRL&nbsp;7（DF‑17）到 TRL&nbsp;5（HCM 概念）不等，其核常兼容策略使外界难以判断其真实用途。
-        </p>
+    <!-- 中国部分 -->
+    <h2 id="china">中国 (China)</h2>
+    <h3 id="china-development">发展脉络</h3>
+    <p>中国在高超音速武器方面的起步相对保密，通过各类情报可梳理出以下时间节点：</p>
+    <ul>
+      <li>
+        <strong>2000s</strong>：国内高校和军工单位开展高超声速风洞和材料研究，据美方估计，中国在 2007 年首次进行高超飞行试验
+        <sup id="fnref8"><a href="#fn8">[8]</a></sup>。
+      </li>
+      <li>
+        <strong>2014–2016</strong>：被西方称为 WU‑14 或 DF‑ZF 的滑翔体进行多次试射，美方推测其速度可达
+        Mach&nbsp;5–10。中国官方未正式披露试验，但普遍认为这一系列试验孕育了东风‑17 弹头
+        <sup id="fnref9"><a href="#fn9">[9]</a></sup>。
+      </li>
+      <li>
+        <strong>2019</strong>：东风‑17 (DF‑17) 首次在国庆阅兵亮相，被称为中程高超音速滑翔导弹；外界估计其射程约
+        1,800–2,500&nbsp;km。【三【5†L91-L99】】
+      </li>
+      <li>
+        <strong>2021</strong>：外媒报道称中国进行了一次部分轨道轰炸系统 (FOBS) 试验，将高超滑翔器送入轨道绕地飞行并再入攻击靶场，此举引发国际关注
+        <sup id="fnref10"><a href="#fn10">[10]</a></sup>。
+      </li>
+      <li>
+        <strong>2022–2025</strong>：持续推进多型号研发，包括“星空‑2”乘波体高超飞行器试验（2018
+        年达成 Mach&nbsp;6），以及可能存在的远程 DF‑27
+        和空射高超导弹项目。官方仍未公开详细参数，外界判断 DF‑17 已装备火箭军并形成作战能力。
+      </li>
+    </ul>
 
-        <h2 id="russia">俄罗斯 (Russia)</h2>
-        <h3 id="russia-development">发展脉络</h3>
-        <p>
-          俄罗斯（及其前身苏联）拥有悠久的高超研究历史。重要时间点包括：
-        </p>
-        <ul>
-          <li>
-            <strong>1980s</strong>：苏联曾进行“闪电”等高超滑翔弹头研究，但由于经济与技术限制停滞
-            <sup id="fnref14"><a href="#fn14">[14]</a></sup>。
-          </li>
-          <li>
-            <strong>2000s</strong>：受美国反导计划刺激，俄罗斯重启高超项目，布局战略突防用途。
-          </li>
-          <li>
-            <strong>2010–2018</strong>：开发两大王牌：战略高超滑翔弹头 “先锋”（Avangard）和海军用的 3M22
-            “锆石” (Tsirkon)。先锋于 2015 年开始飞行试验，2018
-            年普京公开其可达 Mach&nbsp;20 以上并能大幅机动；锆石在 2016–2018
-            年完成多次舰载试射，速度约 Mach&nbsp;8
-            <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref17"><a href="#fn17">[17]</a></sup>。
-          </li>
-          <li>
-            <strong>2019–2022</strong>：先锋系统于 2019 年底部署在奥伦堡导弹师；空射高超导弹 “匕首” (Kh‑47M2
-            Kinzhal) 在 2022 年俄乌冲突中首次实战使用；锆石于 2022 年完成测试并批准服役
-            <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref16"><a href="#fn16">[16]</a></sup>。
-          </li>
-          <li>
-            <strong>2023–2025</strong>：俄罗斯继续扩展高超力量，计划将先锋弹头与新一代 RS‑28
-            “萨尔马特”导弹结合；锆石潜射版在 2023 年试验；匕首导弹在乌克兰战场仍偶有使用，但被爱国者拦截的报道影响其神话。
-          </li>
-        </ul>
+    <h3 id="china-systems">技术路线与代表系统</h3>
+    <p>中国的高超音速项目涵盖滑翔载具和巡航导弹两类，代表系统包括：</p>
+    <ul>
+      <li>
+        <strong>东风‑17</strong>（DF‑17，HGV）：中程机动发射的滑翔导弹，采用固体火箭助推和楔形滑翔弹头，射程估计 1,800–2,500&nbsp;km，可携常规或小型核弹头；被普遍认为已部署
+        <sup id="fnref9"><a href="#fn9">[9]</a></sup>。
+      </li>
+      <li>
+        <strong>DF‑27/DF‑41 改进型</strong>（推测，HGV）：外界猜测中国正在研发更远程的高超滑翔弹头，可能用于 DF‑26 或 DF‑41 弹道导弹；目前无公开细节
+        <sup id="fnref12"><a href="#fn12">[12]</a></sup>。
+      </li>
+      <li>
+        <strong>DF‑ZF/WU‑14</strong>（HGV）：2014–2016 年试验的滑翔弹头名称，被认为是 DF‑17 弹头的实验代号。
+      </li>
+      <li>
+        <strong>星空‑2</strong>（Starry&nbsp;Sky‑2，乘波体试验器）：2018 年试飞，采用乘波体气动布局和火箭推进，达到
+        Mach&nbsp;6。该试验验证了新型气动外形和材料，为未来空射或舰载 HGV 提供技术储备
+        <sup id="fnref11"><a href="#fn11">[11]</a></sup>。
+      </li>
+      <li>
+        <strong>凌云</strong>（Lingyun，高超音速巡航导弹概念）：2018 年公开的模型，使用超燃冲压发动机，设计速度
+        Mach&nbsp;6 以上。外界认为这是高超巡航导弹技术验证平台，尚无服役时间表
+        <sup id="fnref13"><a href="#fn13">[13]</a></sup>。
+      </li>
+      <li>
+        <strong>空射/舰载高超导弹</strong>（推测）：多家情报机构称中国在研制空射高超滑翔器，可能由轰‑6K
+        或新型轰炸机发射；此外，潜艇或水面舰艇搭载高超导弹的传闻也在流传。目前缺乏公开证据
+        <sup id="fnref12"><a href="#fn12">[12]</a></sup>。
+      </li>
+    </ul>
 
-        <h3 id="russia-systems">技术路线与代表系统</h3>
-        <p>俄罗斯高超武器涵盖战略滑翔载具、空射弹道/滑翔导弹和高超巡航导弹：</p>
-        <ul>
-          <li>
-            <strong>“先锋” Avangard</strong>（HGV）：搭载于改装 UR‑100N 或未来 RS‑28 洲际导弹的高超滑翔弹头，宣称速度
-            Mach&nbsp;20+，可执行大幅机动；该系统仅携带核弹头，用于突破美反导系统
-            <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref18"><a href="#fn18">[18]</a></sup>。
-          </li>
-          <li>
-            <strong>Kh‑47M2 “匕首” Kinzhal</strong>（空射高超弹道导弹）：由 MiG‑31K 战斗机发射，实际为弹道导弹加空射改进，速度约
-            Mach&nbsp;10，射程 1,500–2,000&nbsp;km，可携核或常规弹头；俄乌战中曾用于攻击地下仓库
-            <sup id="fnref16"><a href="#fn16">[16]</a></sup>。
-          </li>
-          <li>
-            <strong>3M22 “锆石” Tsirkon</strong>（高超音速巡航导弹，HCM）：由水面舰艇和未来潜艇发射，采用超燃冲压发动机，速度
-            Mach&nbsp;6–8，射程约 1,000&nbsp;km，可攻击海上或陆上目标，计划装备北方舰队和亚森级核潜艇
-            <sup id="fnref17"><a href="#fn17">[17]</a></sup>。
-          </li>
-          <li>
-            <strong>其它项目</strong>：包括传闻中的 Kh‑95 远程高超巡航导弹和小型“Gremlin”项目，具体细节不详。
-          </li>
-        </ul>
+    <h3 id="china-parameters">公开参数与性能</h3>
+    <p>中国官方对高超音速武器的具体性能讳莫如深，公开参数主要来自国外情报推测：</p>
+    <ul>
+      <li>
+        <strong>速度</strong>：DF‑17 和 DF‑ZF 的滑翔段速度估计在 Mach&nbsp;5–10；星空‑2 试验达到 Mach&nbsp;6；有报道宣称中国洲际 HGV
+        速度可达 Mach&nbsp;20 以上，但尚无权威证实。
+      </li>
+      <li>
+        <strong>射程</strong>：DF‑17 约 1,800–2,500&nbsp;km；猜测中的 DF‑27/FOBS
+        可实现数千至全球距离。中国 HCM 的射程尚不明确。
+      </li>
+      <li>
+        <strong>弹头</strong>：中国高超导弹可能具有核常兼容能力。DF‑17
+        的常规弹头推测为几百公斤级高爆战斗部，用于区域拒止；如换装小型核弹，则可对战略目标实施快速打击。
+      </li>
+      <li>
+        <strong>制导</strong>：采用惯性导航和北斗卫星导航进行中段校正。有学者提出未来会加入红外或雷达末端制导，以打击移动海上目标。
+      </li>
+    </ul>
 
-        <h3 id="russia-parameters">公开参数与性能</h3>
-        <ul>
-          <li>
-            <strong>速度</strong>：先锋官方宣传可达 Mach&nbsp;27，但西方估计其滑翔速度约 Mach&nbsp;20；匕首约 Mach&nbsp;10；锆石
-            约 Mach&nbsp;6–8。
-          </li>
-          <li>
-            <strong>射程</strong>：先锋弹头依托洲际导弹，射程上万公里；匕首 1,500–2,000&nbsp;km；锆石 400–1,000&nbsp;km。
-          </li>
-          <li>
-            <strong>弹头</strong>：先锋仅核载荷；匕首和锆石核常兼容，常规战斗部约 500&nbsp;kg 高爆或采用小当量核弹头。
-          </li>
-          <li>
-            <strong>制导</strong>：先锋依赖惯性+星间导航；匕首沿用伊斯坎德尔的光电/雷达制导；锆石据称采用主动雷达末端寻的。
-          </li>
-        </ul>
+    <h3 id="china-status">现状评估</h3>
+    <p>
+      截至 2025 年底，中国是世界上首个公开部署高超音速滑翔导弹的国家。DF‑17
+      被认为已经装备火箭军多个机动旅，形成作战值班能力；其它型号（如远程 HGV、凌云 HCM）处于研发或验证阶段。中国在高超音速风洞和材料方面投入巨大，具有强大的试验基础，但对高超导弹的精确制导和全球预警能力仍相对有限。总体上，中国高超项目的技术成熟度从 TRL&nbsp;7（DF‑17）到 TRL&nbsp;5（HCM 概念）不等，其核常兼容策略使外界难以判断其真实用途。
+    </p>
 
-        <h3 id="russia-status">现状评估</h3>
-        <p>
-          俄罗斯是首个将高超武器用于实战的国家：先锋系统已部署约 12
-          枚弹头以支撑战略威慑；匕首在乌克兰战场使用，但遭遇爱国者拦截使其威名受损；锆石已少量装备在海军护卫舰上，潜射型正试验。受制于经济和制裁，俄罗斯高超武器数量有限，主要起威慑和政治宣传作用，其反制高超能力也较薄弱。
-        </p>
+    <!-- 俄罗斯部分 -->
+    <h2 id="russia">俄罗斯 (Russia)</h2>
+    <h3 id="russia-development">发展脉络</h3>
+    <p>
+      俄罗斯（及其前身苏联）拥有悠久的高超研究历史。重要时间点包括：
+    </p>
+    <ul>
+      <li>
+        <strong>1980s</strong>：苏联曾进行“闪电”等高超滑翔弹头研究，但由于经济与技术限制停滞
+        <sup id="fnref14"><a href="#fn14">[14]</a></sup>。
+      </li>
+      <li>
+        <strong>2000s</strong>：受美国反导计划刺激，俄罗斯重启高超项目，布局战略突防用途。
+      </li>
+      <li>
+        <strong>2010–2018</strong>：开发两大王牌：战略高超滑翔弹头 “先锋”（Avangard）和海军用的 3M22
+        “锆石” (Tsirkon)。先锋于 2015 年开始飞行试验，2018
+        年普京公开其可达 Mach&nbsp;20 以上并能大幅机动；锆石在 2016–2018
+        年完成多次舰载试射，速度约 Mach&nbsp;8
+        <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref17"><a href="#fn17">[17]</a></sup>。
+      </li>
+      <li>
+        <strong>2019–2022</strong>：先锋系统于 2019 年底部署在奥伦堡导弹师；空射高超导弹 “匕首” (Kh‑47M2
+        Kinzhal) 在 2022 年俄乌冲突中首次实战使用；锆石于 2022 年完成测试并批准服役
+        <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref16"><a href="#fn16">[16]</a></sup>。
+      </li>
+      <li>
+        <strong>2023–2025</strong>：俄罗斯继续扩展高超力量，计划将先锋弹头与新一代 RS‑28
+        “萨尔马特”导弹结合；锆石潜射版在 2023 年试验；匕首导弹在乌克兰战场仍偶有使用，但被爱国者拦截的报道影响其神话。
+      </li>
+    </ul>
 
-        <h2 id="comparison">横向对比分析</h2>
-        <p>
-          下表简要比较三国在侦察‑指挥链、平台部署、武器用途与突防逻辑以及反制研究等方面的差异。表格中使用关键词和短语以便浏览，详细分析见正文。
-        </p>
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>比较维度</th>
-                <th>美国</th>
-                <th>中国</th>
-                <th>俄罗斯</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>侦察‑指挥链</td>
-                <td>全球预警完善</td>
-                <td>区域链完备</td>
-                <td>决策快情报少</td>
-              </tr>
-              <tr>
-                <td>发射平台</td>
-                <td>陆舰空原型</td>
-                <td>火箭军旅</td>
-                <td>井基+战机+舰艇</td>
-              </tr>
-              <tr>
-                <td>武器用途</td>
-                <td>常规精打</td>
-                <td>区域威慑</td>
-                <td>核威慑</td>
-              </tr>
-              <tr>
-                <td>突防逻辑</td>
-                <td>精密隐身</td>
-                <td>饱和机动</td>
-                <td>高速核威</td>
-              </tr>
-              <tr>
-                <td>反制研究</td>
-                <td>HBTSS+GPI</td>
-                <td>雷达升级</td>
-                <td>S‑500 宣称</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <h3 id="russia-systems">技术路线与代表系统</h3>
+    <p>俄罗斯高超武器涵盖战略滑翔载具、空射弹道/滑翔导弹和高超巡航导弹：</p>
+    <ul>
+      <li>
+        <strong>“先锋” Avangard</strong>（HGV）：搭载于改装 UR‑100N 或未来 RS‑28 洲际导弹的高超滑翔弹头，宣称速度
+        Mach&nbsp;20+，可执行大幅机动；该系统仅携带核弹头，用于突破美反导系统
+        <sup id="fnref15"><a href="#fn15">[15]</a></sup><sup id="fnref18"><a href="#fn18">[18]</a></sup>。
+      </li>
+      <li>
+        <strong>Kh‑47M2 “匕首” Kinzhal</strong>（空射高超弹道导弹）：由 MiG‑31K 战斗机发射，实际为弹道导弹加空射改进，速度约
+        Mach&nbsp;10，射程 1,500–2,000&nbsp;km，可携核或常规弹头；俄乌战中曾用于攻击地下仓库
+        <sup id="fnref16"><a href="#fn16">[16]</a></sup>。
+      </li>
+      <li>
+        <strong>3M22 “锆石” Tsirkon</strong>（高超音速巡航导弹，HCM）：由水面舰艇和未来潜艇发射，采用超燃冲压发动机，速度
+        Mach&nbsp;6–8，射程约 1,000&nbsp;km，可攻击海上或陆上目标，计划装备北方舰队和亚森级核潜艇
+        <sup id="fnref17"><a href="#fn17">[17]</a></sup>。
+      </li>
+      <li>
+        <strong>其它项目</strong>：包括传闻中的 Kh‑95 远程高超巡航导弹和小型“Gremlin”项目，具体细节不详。
+      </li>
+    </ul>
 
-        <h3>关键时间轴（摘要）</h3>
-        <p>
-          下表列出三国高超音速武器的部分重要节点，便于快速了解发展过程。详细内容见各国章节。
-        </p>
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>年份</th>
-                <th>美国事件</th>
-                <th>中国事件</th>
-                <th>俄罗斯事件</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2003–2013</td>
-                <td>FALCON HTV‑2、X‑51A 等演示验证</td>
-                <td>早期风洞与计算研究</td>
-                <td>苏联遗产停滞，高超研究重启</td>
-              </tr>
-              <tr>
-                <td>2014–2016</td>
-                <td>–</td>
-                <td>WU‑14/DF‑ZF 多次试射</td>
-                <td>Avangard 开始飞行试验</td>
-              </tr>
-              <tr>
-                <td>2017–2019</td>
-                <td>ARRW、LRHW、CPS 项目启动</td>
-                <td>DF‑17 在国庆阅兵亮相</td>
-                <td>Avangard、Zircon 完成试验</td>
-              </tr>
-              <tr>
-                <td>2019–2022</td>
-                <td>ARRW 试射成功与失败并存；C‑HGB 全程试飞</td>
-                <td>疑似 FOBS 试验；星空‑2 验证</td>
-                <td>先锋部署；匕首实战；锆石批准服役</td>
-              </tr>
-              <tr>
-                <td>2023–2025</td>
-                <td>ARRW 项目结束；LRHW 末端试射；CPS/HACM 研发推进</td>
-                <td>DF‑17 扩充部署；空射/远程 HGV 传闻</td>
-                <td>先锋与萨尔马特结合；锆石潜射试验</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <h3 id="russia-parameters">公开参数与性能</h3>
+    <ul>
+      <li>
+        <strong>速度</strong>：先锋官方宣传可达 Mach&nbsp;27，但西方估计其滑翔速度约 Mach&nbsp;20；匕首约 Mach&nbsp;10；锆石
+        约 Mach&nbsp;6–8。
+      </li>
+      <li>
+        <strong>射程</strong>：先锋弹头依托洲际导弹，射程上万公里；匕首 1,500–2,000&nbsp;km；锆石 400–1,000&nbsp;km。
+      </li>
+      <li>
+        <strong>弹头</strong>：先锋仅核载荷；匕首和锆石核常兼容，常规战斗部约 500&nbsp;kg 高爆或采用小当量核弹头。
+      </li>
+      <li>
+        <strong>制导</strong>：先锋依赖惯性+星间导航；匕首沿用伊斯坎德尔的光电/雷达制导；锆石据称采用主动雷达末端寻的。
+      </li>
+    </ul>
 
-        <h2 id="other">其他国家的高超音速项目</h2>
-        <p>除美、中、俄三国外，多国也在开展高超音速研究。以下简要列出主要项目：</p>
-        <ul>
-          <li>
-            <strong>法国</strong>：V‑MaX 滑翔载具实验项目，2023 年 6 月首次试射成功
-            <sup id="fnref20"><a href="#fn20">[20]</a></sup>，计划用于新一代空基核导弹 ASN4G。
-          </li>
-          <li>
-            <strong>英国</strong>：与美国合作“Team&nbsp;Hypersonics”，研制 Mach&nbsp;5 级空射高超巡航导弹，2025
-            年在 NASA 风洞完成 233 次超燃发动机试车
-            <sup id="fnref21"><a href="#fn21">[21]</a></sup>。
-          </li>
-          <li>
-            <strong>印度</strong>：HSTDV 技术演示器 2020 年试飞，目标开发 Mach&nbsp;6–8 级 HCM；印俄合作的 BrahMos‑II
-            高超反舰导弹项目进展缓慢
-            <sup id="fnref22"><a href="#fn22">[22]</a></sup>。
-          </li>
-          <li>
-            <strong>日本</strong>：防卫装备厅推进 HVGP（高速滑翔弹）和 HCM 双轨计划，第一代 HVGP
-            预计 2026 年部署，Block&nbsp;2 射程可达 2,000–3,000&nbsp;km
-            <sup id="fnref23"><a href="#fn23">[23]</a></sup>。
-          </li>
-          <li>
-            <strong>澳大利亚</strong>：参与与美国合作的 HACM 计划，拟在 F/A‑18F 战机上集成高超巡航导弹
-            <sup id="fnref24"><a href="#fn24">[24]</a></sup>。
-          </li>
-          <li>
-            <strong>朝鲜</strong>：宣称拥有“火星‑8”高超导弹，2022
-            年试射的弹头在飞行中横向机动约 120&nbsp;km，但技术成熟度有限
-            <sup id="fnref25"><a href="#fn25">[25]</a></sup>。
-          </li>
-          <li>
-            <strong>伊朗</strong>：2023 年公布 “Fattah” 高超导弹，声称射程 1,400&nbsp;km、速度
-            Mach&nbsp;14–15，但外界认为更像弹道导弹改进型
-            <sup id="fnref19"><a href="#fn19">[19]</a></sup><sup id="fnref26"><a href="#fn26">[26]</a></sup>。
-          </li>
-          <li>
-            <strong>以色列、德国/欧盟等</strong>：以色列暂无公开高超武器项目，主要发展反高超拦截；德国和欧盟以
-            TWISTER 计划为代表，聚焦预警与拦截能力。英法未来的 FCAS 项目也可能集成高超巡航导弹组件。
-          </li>
-        </ul>
+    <h3 id="russia-status">现状评估</h3>
+    <p>
+      俄罗斯是首个将高超武器用于实战的国家：先锋系统已部署约 12
+      枚弹头以支撑战略威慑；匕首在乌克兰战场使用，但遭遇爱国者拦截使其威名受损；锆石已少量装备在海军护卫舰上，潜射型正试验。受制于经济和制裁，俄罗斯高超武器数量有限，主要起威慑和政治宣传作用，其反制高超能力也较薄弱。
+    </p>
 
-        <h3>型号与项目总表</h3>
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>国家/地区</th>
-                <th>系统</th>
-                <th>类型</th>
-                <th>发射平台</th>
-                <th>状态</th>
-                <th>关键参数</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>美国</td>
-                <td>ARRW</td>
-                <td>HGV</td>
-                <td>B‑52H 空射</td>
-                <td>原型试验终止</td>
-                <td>Mach&nbsp;6.5–8；射程 ~1,600 km</td>
-              </tr>
-              <tr>
-                <td>美国</td>
-                <td>LRHW “暗鹰”</td>
-                <td>HGV</td>
-                <td>陆基机动</td>
-                <td>原型部队部署</td>
-                <td>射程 2,775–3,500 km；动能杀伤</td>
-              </tr>
-              <tr>
-                <td>美国</td>
-                <td>CPS</td>
-                <td>HGV</td>
-                <td>驱逐舰/潜艇</td>
-                <td>测试中</td>
-                <td>共享 C‑HGB；部署 2027</td>
-              </tr>
-              <tr>
-                <td>美国</td>
-                <td>HACM</td>
-                <td>HCM</td>
-                <td>F‑15EX/F‑35 等</td>
-                <td>研发中</td>
-                <td>Mach&nbsp;5+；射程数百–千 km</td>
-              </tr>
-              <tr>
-                <td>中国</td>
-                <td>DF‑17</td>
-                <td>HGV</td>
-                <td>陆基机动</td>
-                <td>已部署</td>
-                <td>射程 1,800–2,500 km；核常兼容</td>
-              </tr>
-              <tr>
-                <td>中国</td>
-                <td>星空‑2</td>
-                <td>HGV/试验器</td>
-                <td>火箭助推</td>
-                <td>技术验证</td>
-                <td>Mach&nbsp;6；乘波体设计</td>
-              </tr>
-              <tr>
-                <td>中国</td>
-                <td>凌云</td>
-                <td>HCM</td>
-                <td>未知（空射/地面）</td>
-                <td>概念验证</td>
-                <td>Mach&nbsp;6+</td>
-              </tr>
-              <tr>
-                <td>俄罗斯</td>
-                <td>Avangard</td>
-                <td>HGV</td>
-                <td>UR‑100N/RS‑28</td>
-                <td>已部署</td>
-                <td>Mach&nbsp;20；核载具</td>
-              </tr>
-              <tr>
-                <td>俄罗斯</td>
-                <td>Kinzhal</td>
-                <td>弹道/滑翔</td>
-                <td>MiG‑31K/Tu‑22M3</td>
-                <td>实战使用</td>
-                <td>Mach&nbsp;10；射程 1,500–2,000 km</td>
-              </tr>
-              <tr>
-                <td>俄罗斯</td>
-                <td>Tsirkon</td>
-                <td>HCM</td>
-                <td>护卫舰/潜艇</td>
-                <td>初始部署</td>
-                <td>Mach&nbsp;6–8；射程 ~1,000 km</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <!-- 横向对比分析 -->
+    <h2 id="comparison">横向对比分析</h2>
+    <p>
+      下表简要比较三国在侦察‑指挥链、平台部署、武器用途与突防逻辑以及反制研究等方面的差异。表格中使用关键词和短语以便浏览，详细分析见正文。
+    </p>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>比较维度</th>
+          <th>美国</th>
+          <th>中国</th>
+          <th>俄罗斯</th>
+        </tr>
+        <tr>
+          <td>侦察‑指挥链</td>
+          <td>全球预警完善</td>
+          <td>区域链完备</td>
+          <td>决策快情报少</td>
+        </tr>
+        <tr>
+          <td>发射平台</td>
+          <td>陆舰空原型</td>
+          <td>火箭军旅</td>
+          <td>井基+战机+舰艇</td>
+        </tr>
+        <tr>
+          <td>武器用途</td>
+          <td>常规精打</td>
+          <td>区域威慑</td>
+          <td>核威慑</td>
+        </tr>
+        <tr>
+          <td>突防逻辑</td>
+          <td>精密隐身</td>
+          <td>饱和机动</td>
+          <td>高速核威</td>
+        </tr>
+        <tr>
+          <td>反制研究</td>
+          <td>HBTSS+GPI</td>
+          <td>雷达升级</td>
+          <td>S‑500 宣称</td>
+        </tr>
+      </table>
+    </div>
 
-        <h2 id="references">参考文献</h2>
-        <div class="footnotes">
-          <ol>
-            <li id="fn1">
-              <a href="#fnref1">[1]</a> Hypersonic Weapons: Background and Issues for Congress （高超音速武器：背景与国会关注）– CRS report, 2025.
-            </li>
-            </ol>
-        </div>
-      </div>
-    </main>
+    <h3>关键时间轴（摘要）</h3>
+    <p>
+      下表列出三国高超音速武器的部分重要节点，便于快速了解发展过程。详细内容见各国章节。
+    </p>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>年份</th>
+          <th>美国事件</th>
+          <th>中国事件</th>
+          <th>俄罗斯事件</th>
+        </tr>
+        <tr>
+          <td>2003–2013</td>
+          <td>FALCON HTV‑2、X‑51A 等演示验证</td>
+          <td>早期风洞与计算研究</td>
+          <td>苏联遗产停滞，高超研究重启</td>
+        </tr>
+        <tr>
+          <td>2014–2016</td>
+          <td>–</td>
+          <td>WU‑14/DF‑ZF 多次试射</td>
+          <td>Avangard 开始飞行试验</td>
+        </tr>
+        <tr>
+          <td>2017–2019</td>
+          <td>ARRW、LRHW、CPS 项目启动</td>
+          <td>DF‑17 在国庆阅兵亮相</td>
+          <td>Avangard、Zircon 完成试验</td>
+        </tr>
+        <tr>
+          <td>2019–2022</td>
+          <td>ARRW 试射成功与失败并存；C‑HGB 全程试飞</td>
+          <td>疑似 FOBS 试验；星空‑2 验证</td>
+          <td>先锋部署；匕首实战；锆石批准服役</td>
+        </tr>
+        <tr>
+          <td>2023–2025</td>
+          <td>ARRW 项目结束；LRHW 末端试射；CPS/HACM 研发推进</td>
+          <td>DF‑17 扩充部署；空射/远程 HGV 传闻</td>
+          <td>先锋与萨尔马特结合；锆石潜射试验</td>
+        </tr>
+      </table>
+    </div>
 
-    <button id="back-to-top" title="回到顶部">↑</button>
+    <!-- 其他国家部分 -->
+    <h2 id="other">其他国家的高超音速项目</h2>
+    <p>除美、中、俄三国外，多国也在开展高超音速研究。以下简要列出主要项目：</p>
+    <ul>
+      <li>
+        <strong>法国</strong>：V‑MaX 滑翔载具实验项目，2023 年 6 月首次试射成功
+        <sup id="fnref20"><a href="#fn20">[20]</a></sup>，计划用于新一代空基核导弹 ASN4G。
+      </li>
+      <li>
+        <strong>英国</strong>：与美国合作“Team&nbsp;Hypersonics”，研制 Mach&nbsp;5 级空射高超巡航导弹，2025
+        年在 NASA 风洞完成 233 次超燃发动机试车
+        <sup id="fnref21"><a href="#fn21">[21]</a></sup>。
+      </li>
+      <li>
+        <strong>印度</strong>：HSTDV 技术演示器 2020 年试飞，目标开发 Mach&nbsp;6–8 级 HCM；印俄合作的 BrahMos‑II
+        高超反舰导弹项目进展缓慢
+        <sup id="fnref22"><a href="#fn22">[22]</a></sup>。
+      </li>
+      <li>
+        <strong>日本</strong>：防卫装备厅推进 HVGP（高速滑翔弹）和 HCM 双轨计划，第一代 HVGP
+        预计 2026 年部署，Block&nbsp;2 射程可达 2,000–3,000&nbsp;km
+        <sup id="fnref23"><a href="#fn23">[23]</a></sup>。
+      </li>
+      <li>
+        <strong>澳大利亚</strong>：参与与美国合作的 HACM 计划，拟在 F/A‑18F 战机上集成高超巡航导弹
+        <sup id="fnref24"><a href="#fn24">[24]</a></sup>。
+      </li>
+      <li>
+        <strong>朝鲜</strong>：宣称拥有“火星‑8”高超导弹，2022
+        年试射的弹头在飞行中横向机动约 120&nbsp;km，但技术成熟度有限
+        <sup id="fnref25"><a href="#fn25">[25]</a></sup>。
+      </li>
+      <li>
+        <strong>伊朗</strong>：2023 年公布 “Fattah” 高超导弹，声称射程 1,400&nbsp;km、速度
+        Mach&nbsp;14–15，但外界认为更像弹道导弹改进型
+        <sup id="fnref19"><a href="#fn19">[19]</a></sup><sup id="fnref26"><a href="#fn26">[26]</a></sup>。
+      </li>
+      <li>
+        <strong>以色列、德国/欧盟等</strong>：以色列暂无公开高超武器项目，主要发展反高超拦截；德国和欧盟以
+        TWISTER 计划为代表，聚焦预警与拦截能力。英法未来的 FCAS 项目也可能集成高超巡航导弹组件。
+      </li>
+    </ul>
 
-  </div>
+    <h3>型号与项目总表</h3>
+    <p>下表汇总主要国家（含其他国家）已知高超音速武器或技术项目。参数为公开范围的关键词，非详尽数据。</p>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>国家/地区</th>
+          <th>系统</th>
+          <th>类型 (HGV/HCM)</th>
+          <th>发射平台</th>
+          <th>状态</th>
+          <th>关键参数</th>
+        </tr>
+        <tr>
+          <td>美国</td>
+          <td>ARRW</td>
+          <td>HGV</td>
+          <td>B‑52H 空射</td>
+          <td>原型试验终止</td>
+          <td>Mach&nbsp;6.5–8；射程 ~1,600 km</td>
+        </tr>
+        <tr>
+          <td>美国</td>
+          <td>LRHW “暗鹰”</td>
+          <td>HGV</td>
+          <td>陆基机动</td>
+          <td>原型部队部署</td>
+          <td>射程 2,775–3,500 km；动能杀伤</td>
+        </tr>
+        <tr>
+          <td>美国</td>
+          <td>CPS</td>
+          <td>HGV</td>
+          <td>驱逐舰/潜艇</td>
+          <td>测试中</td>
+          <td>共享 C‑HGB；部署 2027</td>
+        </tr>
+        <tr>
+          <td>美国</td>
+          <td>HACM</td>
+          <td>HCM</td>
+          <td>F‑15EX/F‑35 等</td>
+          <td>研发中</td>
+          <td>Mach&nbsp;5+；射程数百–千 km</td>
+        </tr>
+        <tr>
+          <td>中国</td>
+          <td>DF‑17</td>
+          <td>HGV</td>
+          <td>陆基机动</td>
+          <td>已部署</td>
+          <td>射程 1,800–2,500 km；核常兼容</td>
+        </tr>
+        <tr>
+          <td>中国</td>
+          <td>星空‑2</td>
+          <td>HGV/试验器</td>
+          <td>火箭助推</td>
+          <td>技术验证</td>
+          <td>Mach&nbsp;6；乘波体设计</td>
+        </tr>
+        <tr>
+          <td>中国</td>
+          <td>凌云</td>
+          <td>HCM</td>
+          <td>未知（空射/地面）</td>
+          <td>概念验证</td>
+          <td>Mach&nbsp;6+</td>
+        </tr>
+        <tr>
+          <td>俄罗斯</td>
+          <td>Avangard</td>
+          <td>HGV</td>
+          <td>UR‑100N/RS‑28 洲际导弹</td>
+          <td>已部署</td>
+          <td>Mach&nbsp;20；核载具</td>
+        </tr>
+        <tr>
+          <td>俄罗斯</td>
+          <td>Kinzhal</td>
+          <td>弹道/滑翔</td>
+          <td>MiG‑31K/Tu‑22M3</td>
+          <td>实战使用</td>
+          <td>Mach&nbsp;10；射程 1,500–2,000 km</td>
+        </tr>
+        <tr>
+          <td>俄罗斯</td>
+          <td>Tsirkon</td>
+          <td>HCM</td>
+          <td>护卫舰/潜艇</td>
+          <td>初始部署</td>
+          <td>Mach&nbsp;6–8；射程 ~1,000 km</td>
+        </tr>
+        <tr>
+          <td>法国</td>
+          <td>V‑MaX</td>
+          <td>HGV</td>
+          <td>助推火箭</td>
+          <td>技术演示</td>
+          <td>2023 首试成功</td>
+        </tr>
+        <tr>
+          <td>英国</td>
+          <td>Team Hypersonics</td>
+          <td>HCM</td>
+          <td>空射</td>
+          <td>研发中</td>
+          <td>超燃发动机 233 次试车</td>
+        </tr>
+        <tr>
+          <td>印度</td>
+          <td>HSTDV</td>
+          <td>HCM</td>
+          <td>助推火箭</td>
+          <td>演示成功</td>
+          <td>Mach&nbsp;6；20 秒燃烧</td>
+        </tr>
+        <tr>
+          <td>印度</td>
+          <td>BrahMos‑II</td>
+          <td>HCM</td>
+          <td>舰载/陆基</td>
+          <td>计划阶段</td>
+          <td>Mach&nbsp;7；射程 ~600 km</td>
+        </tr>
+        <tr>
+          <td>日本</td>
+          <td>HVGP</td>
+          <td>HGV</td>
+          <td>陆基机动</td>
+          <td>Block&nbsp;1 开发</td>
+          <td>射程 ~900 km（Block&nbsp;1）</td>
+        </tr>
+        <tr>
+          <td>日本</td>
+          <td>HCM</td>
+          <td>HCM</td>
+          <td>未知（空射）</td>
+          <td>设计阶段</td>
+          <td>用于反舰打击</td>
+        </tr>
+        <tr>
+          <td>朝鲜</td>
+          <td>火星‑8</td>
+          <td>HGV</td>
+          <td>弹道导弹</td>
+          <td>试验</td>
+          <td>射程 ~700 km；横向机动</td>
+        </tr>
+        <tr>
+          <td>伊朗</td>
+          <td>Fattah</td>
+          <td>HGV?</td>
+          <td>弹道导弹</td>
+          <td>展示阶段</td>
+          <td>宣称 Mach&nbsp;14–15；射程 1,400 km</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 参考文献 -->
+    <h2 id="references">参考文献</h2>
+    <div class="footnotes">
+      <ol>
+        <li id="fn1">
+          <a href="#fnref1">[1]</a> Hypersonic Weapons: Background and Issues for Congress （高超音速武器：背景与国会关注）– CRS report, 2025. <a href="https://www.congress.gov/crs_external_products/R/PDF/R45811/R45811.55.pdf" target="_blank">原文</a>.
+        </li>
+        <li id="fn2">
+          <a href="#fnref2">[2]</a> Hypersonic Weapons: Background and Issues for Congress – technical principles and propulsion (技术原理与推进方式). <a href="https://www.congress.gov/crs_external_products/R/PDF/R45811/R45811.55.pdf" target="_blank">原文</a>.
+        </li>
+        <li id="fn3">
+          <a href="#fnref3">[3]</a> Hypersonic Weapons: Background and Issues for Congress – U.S. ARRW, LRHW &amp; CPS program initiation 2017–2019. <a href="https://www.congress.gov/crs_external_products/R/PDF/R45811/R45811.55.pdf" target="_blank">原文</a>.
+        </li>
+        <li id="fn4">
+          <a href="#fnref4">[4]</a> New Dark Eagle Hypersonic Weapon Details Emerge – The War Zone (战争地带), 14 Dec 2025. <a href="https://www.twz.com/land/new-dark-eagle-hypersonic-weapon-details-emerge" target="_blank">原文</a>.
+        </li>
+        <li id="fn5">
+          <a href="#fnref5">[5]</a> U.S. Looks to Field its First Hypersonic Weapon, Reenergize Efforts – National Defense Magazine, 22 Jul 2025. <a href="https://www.nationaldefensemagazine.org/articles/2025/7/22/us-looks-to-field-its-first-hypersonic-weapon-reenergize-efforts" target="_blank">原文</a>.
+        </li>
+        <li id="fn6">
+          <a href="#fnref6">[6]</a> Third Test Flight for DARPA’s HAWC Yields New Performance Data – DARPA News Release, Jul 2022. <a href="https://www.darpa.mil/news/2022/hawc-third-test-flight" target="_blank">原文</a>.
+        </li>
+        <li id="fn7">
+          <a href="#fnref7">[7]</a> Air Force announces hypersonic missile contract award – U.S. Air Force, 22 Sep 2022. <a href="https://www.af.mil/News/Article-Display/Article/3149496/air-force-announces-hypersonic-missile-contract-award/" target="_blank">原文</a>.
+        </li>
+        <li id="fn8">
+          <a href="#fnref8">[8]</a> Hypersonic Weapons: Background and Issues for Congress – Chinese early hypersonic research estimates. <a href="https://www.congress.gov/crs_external_products/R/PDF/R45811/R45811.55.pdf" target="_blank">原文</a>.
+        </li>
+        <li id="fn9">
+          <a href="#fnref9">[9]</a> DF‑17 Hypersonic Glide Vehicle – Missile Threat (CSIS). <a href="https://missilethreat.csis.org/missile/df-17/" target="_blank">原文</a>.
+        </li>
+        <li id="fn10">
+          <a href="#fnref10">[10]</a> China Tested Hypersonic Capability, U.S. Says – Arms Control Association, Nov 2021. <a href="https://www.armscontrol.org/act/2021-11/news/china-tested-hypersonic-capability-us-says" target="_blank">原文</a>.
+        </li>
+        <li id="fn11">
+          <a href="#fnref11">[11]</a> China shows off a new hypersonic aircraft that it claims can fly at Mach 6 – Military Times, Aug 2018. <a href="https://www.militarytimes.com/news/your-army/2018/08/07/china-shows-off-a-new-hypersonic-aircraft-that-it-claims-can-fly-at-mach-6/" target="_blank">原文</a>.
+        </li>
+        <li id="fn12">
+          <a href="#fnref12">[12]</a> China Tested New DF‑27 Hypersonic ICBM That Can Penetrate Mainland US Defense Systems – EurAsian Times, 2023. <a href="https://eurasiantimes.com/china-tested-new-df-27-hypersonic-icbm/" target="_blank">原文</a>.
+        </li>
+        <li id="fn13">
+          <a href="#fnref13">[13]</a> China reveals Lingyun‑1 hypersonic cruise missile model – The Defense Post, 21 May 2018. <a href="https://www.thedefensepost.com/2018/05/21/china-lingyun-1-hypersonic-cruise-missile-model/" target="_blank">原文</a>.
+        </li>
+        <li id="fn14">
+          <a href="#fnref14">[14]</a> Hypersonic Weapons: Background and Issues for Congress – Soviet early hypersonic research background. <a href="https://www.congress.gov/crs_external_products/R/PDF/R45811/R45811.55.pdf" target="_blank">原文</a>.
+        </li>
+        <li id="fn15">
+          <a href="#fnref15">[15]</a> Avangard: Russia deploys hypersonic nuclear‑capable missiles – Al Jazeera, 27 Dec 2019. <a href="https://www.aljazeera.com/news/2019/12/27/avangard-russia-deploys-hypersonic-nuclear-capable-missiles" target="_blank">原文</a>.
+        </li>
+        <li id="fn16">
+          <a href="#fnref16">[16]</a> Kh‑47M2 Kinzhal – Missile Threat (CSIS). <a href="https://missilethreat.csis.org/missile/kh-47m2-kinzhal/" target="_blank">原文</a>.
+        </li>
+        <li id="fn17">
+          <a href="#fnref17">[17]</a> Russia completes flight tests of Tsirkon hypersonic missile – Naval News, Sep 2021. <a href="https://www.navalnews.com/naval-news/2021/09/russia-completes-flight-tests-of-tsirkon-hypersonic-missile/" target="_blank">原文</a>.
+        </li>
+        <li id="fn18">
+          <a href="#fnref18">[18]</a> Avangard: Russia deploys hypersonic nuclear‑capable missiles – discussion of speed and nuclear carriage – Al Jazeera. <a href="https://www.aljazeera.com/news/2019/12/27/avangard-russia-deploys-hypersonic-nuclear-capable-missiles" target="_blank">原文</a>.
+        </li>
+        <li id="fn19">
+          <a href="#fnref19">[19]</a> Iran presents its first hypersonic ballistic missile, state media reports – Reuters, 6 Jun 2023. <a href="https://www.reuters.com/world/middle-east/iran-presents-its-first-hypersonic-ballistic-missile-state-media-2023-06-06/" target="_blank">原文</a>.
+        </li>
+        <li id="fn20">
+          <a href="#fnref20">[20]</a> France conducts maiden test of hypersonic glider (V‑MaX) – Reuters, 27 Jun 2023. <a href="https://www.reuters.com/world/europe/france-conducts-maiden-test-hypersonic-glider-2023-06-27/" target="_blank">原文</a>.
+        </li>
+        <li id="fn21">
+          <a href="#fnref21">[21]</a> UK and US hit major milestone in development of hypersonic weapons – GOV.UK press release, 6 Apr 2025. <a href="https://www.gov.uk/government/news/uk-and-us-hit-major-milestone-in-development-of-hypersonic-weapons" target="_blank">原文</a>.
+        </li>
+        <li id="fn22">
+          <a href="#fnref22">[22]</a> India tests hypersonic missile – Arms Control Association, Oct 2020. <a href="https://www.armscontrol.org/act/2020-10/news/india-tests-hypersonic-missile" target="_blank">原文</a>.
+        </li>
+        <li id="fn23">
+          <a href="#fnref23">[23]</a> Japan doubles down on standoff missiles to deter China – Naval News, May 2023. <a href="https://www.navalnews.com/naval-news/2023/05/japan-doubles-down-on-standoff-missiles-to-deter-china/" target="_blank">原文</a>.
+        </li>
+        <li id="fn24">
+          <a href="#fnref24">[24]</a> Australian F/A‑18F Super Hornets To Test Launch U.S. Air Force’s Hypersonic Cruise Missiles – The War Zone, 2023. <a href="https://www.twz.com/air/australian-f-a-18f-super-hornets-to-test-launch-u-s-air-forces-hypersonic-cruise-missiles" target="_blank">原文</a>.
+        </li>
+        <li id="fn25">
+          <a href="#fnref25">[25]</a> Another North Korean “Hypersonic” Missile? – 38 North, Jan 2022. <a href="https://www.38north.org/2022/01/another-north-korean-hypersonic-missile/" target="_blank">原文</a>.
+        </li>
+        <li id="fn26">
+          <a href="#fnref26">[26]</a> Removing the hype from Iran’s ‘Fattah’ hypersonic missile – IISS Analysis, Jun 2023. <a href="https://www.iiss.org/blogs/analysis/2023/06/iran-hypersonic-missile-analysis" target="_blank">原文</a>.
+        </li>
+      </ol>
+    </div>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
