@@ -1,78 +1,89 @@
-/* 现代化样式表 - 高超音速导弹综述 
-  优化点：响应式布局、排版、配色、交互细节
-*/
+/* 现代化样式表 - 高超音速导弹综述 */
 
 :root {
-  --primary-color: #2b3a67;       /* 深蓝主色 */
-  --accent-color: #4969c5;        /* 亮蓝强调色 */
-  --text-color: #333333;          /* 正文黑 */
-  --light-text: #666666;          /* 辅助灰 */
-  --bg-color: #f4f6f9;            /* 页面背景 */
-  --sidebar-bg: #ffffff;          /* 侧边栏背景 */
-  --content-bg: #ffffff;          /* 内容背景 */
-  --border-color: #e1e4e8;        /* 边框色 */
-  --sidebar-width: 280px;
-  --header-height: 60px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+  /* 配色方案 - 优雅的蓝灰/岩石色系 */
+  --color-primary: #334155;     /* Slate 700 */
+  --color-secondary: #475569;   /* Slate 600 */
+  --color-accent: #3b82f6;      /* Blue 500 */
+  --color-accent-hover: #2563eb;/* Blue 600 */
+  --color-bg: #f8fafc;          /* Slate 50 */
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;      /* Slate 200 */
+  --color-text: #1e293b;        /* Slate 800 */
+  --color-text-muted: #64748b;  /* Slate 500 */
+  
+  --font-sans: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, Monaco, monospace;
+  
+  --sidebar-width: 260px;
+  --header-height-mobile: 56px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-/* 全局重置与排版 */
+/* 全局重置 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* 避免跳转时标题被遮挡 */
+  scroll-padding-top: 100px; /* 增加留白 */
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.8; /* 增加行高提升阅读体验 */
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 进度条 */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-accent);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s;
 }
 
 /* 布局容器 */
 .app-container {
   display: flex;
-  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-/* 侧边导航栏 (桌面端) */
+/* --- 侧边导航栏 (Desktop) --- */
 #sidebar {
   width: var(--sidebar-width);
-  background-color: var(--sidebar-bg);
-  border-right: 1px solid var(--border-color);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
-  z-index: 100;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-header {
-  padding: 20px;
-  background: var(--primary-color);
-  color: #fff;
-  text-align: center;
+  height: 100vh;
   position: sticky;
   top: 0;
-  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
-.sidebar-title {
-  font-size: 18px;
+.sidebar-title-desktop {
   font-weight: 700;
-  margin: 0;
-}
-
-#sidebar nav {
-  padding: 20px;
-  flex: 1;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  padding-left: 0.75rem;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
 
 #sidebar ul {
@@ -81,304 +92,339 @@ body {
   margin: 0;
 }
 
-#sidebar li {
-  margin-bottom: 4px;
+#sidebar ul li {
+  margin-bottom: 0.25rem;
 }
 
-/* 侧边栏链接样式 */
 #sidebar a {
   display: block;
-  padding: 10px 15px;
-  color: var(--text-color);
+  padding: 0.5rem 0.75rem;
+  color: var(--color-text-muted);
   text-decoration: none;
-  font-size: 14px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   transition: all 0.2s ease;
-  border-left: 3px solid transparent;
+  position: relative;
 }
 
 #sidebar a:hover {
-  background-color: #f0f4ff;
-  color: var(--accent-color);
+  background-color: #f1f5f9;
+  color: var(--color-text);
 }
 
-/* 激活状态 (由JS控制) */
 #sidebar a.active {
-  background-color: #eef2fd;
-  color: var(--accent-color);
-  border-left-color: var(--accent-color);
-  font-weight: 600;
+  background-color: #eff6ff;
+  color: var(--color-accent);
+  font-weight: 500;
 }
 
-/* 二级菜单缩进 */
+/* 侧边栏二级菜单 */
 #sidebar ul ul {
-  padding-left: 15px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--color-border);
 }
 
 #sidebar ul ul a {
-  font-size: 13px;
-  padding: 8px 15px;
-  color: var(--light-text);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
 }
 
-/* 主内容区 */
+#sidebar ul ul a.active::before {
+  content: "";
+  position: absolute;
+  left: -17px; /* 对齐到父级边框线 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* --- 主内容区 --- */
 #content {
-  margin-left: var(--sidebar-width);
   flex: 1;
-  padding: 40px;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* 内容卡片化，限制最大宽度以利阅读 */
-.content-wrapper {
-  max-width: 900px; /* 黄金阅读宽度 */
+  padding: 4rem 5rem;
+  min-width: 0; /* 防止Flex子项溢出 */
+  max-width: 960px; /* 最佳阅读宽度 */
   margin: 0 auto;
-  background: var(--content-bg);
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
 }
 
-/* 标题样式 */
-h1 {
-  font-size: 32px;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 20px;
+/* 文档头部 */
+.doc-header {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2rem;
 }
 
+.doc-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.doc-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* 章节标题 */
 h2 {
-  font-size: 24px;
-  color: var(--primary-color);
-  margin-top: 50px;
-  margin-bottom: 20px;
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
 }
 
-/* 标题前的装饰条 */
 h2::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 24px;
-  background-color: var(--accent-color);
-  margin-right: 12px;
-  border-radius: 3px;
+  content: "#";
+  color: var(--color-accent);
+  margin-right: 0.5rem;
+  font-weight: 300;
+  opacity: 0.5;
 }
 
 h3 {
-  font-size: 18px;
-  color: #2c3e50;
-  margin-top: 30px;
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
 p {
-  margin-bottom: 1.5em;
-  color: #444;
-  text-align: justify; /* 两端对齐更整齐 */
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
 }
 
 strong {
-  color: #222;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
-/* 列表样式 */
-#content ul, #content ol {
-  padding-left: 25px;
-  margin-bottom: 20px;
-}
-
-#content li {
-  margin-bottom: 10px;
-  color: #444;
-}
-
-/* 表格优化 */
+/* 表格样式优化 */
 .table-container {
   overflow-x: auto;
-  margin: 30px 0;
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border);
+  margin: 2rem 0;
+  background: var(--color-surface);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
-  background: #fff;
-}
-
-th, td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  white-space: nowrap; /* 防止换行破坏布局，配合横向滚动 */
 }
 
 th {
-  background-color: #f8f9fa;
-  color: var(--primary-color);
+  background-color: #f1f5f9;
+  color: var(--color-primary);
   font-weight: 600;
-  white-space: nowrap;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
-tr:hover {
-  background-color: #f9fcff; /* 悬停高亮 */
+td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
 tr:last-child td {
   border-bottom: none;
 }
 
-/* 参考文献与引用 */
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #eff6ff;
+}
+
+/* 引用样式 */
 .footnotes {
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color);
-  font-size: 13px;
-  color: var(--light-text);
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
 }
 
-.footnotes a {
-  color: var(--accent-color);
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: var(--color-accent);
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.footnotes a:hover {
+a:hover {
+  color: var(--color-accent-hover);
   text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
-sup a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 2px;
+/* 移动端 Header (默认隐藏) */
+#mobile-header {
+  display: none;
+  height: var(--header-height-mobile);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
 }
 
 /* 回到顶部按钮 */
 #back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: var(--primary-color);
-  color: white;
-  width: 45px;
-  height: 45px;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  border: none;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  z-index: 200;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  pointer-events: none;
 }
 
 #back-to-top.visible {
   opacity: 1;
-  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 #back-to-top:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-3px);
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
 }
 
-/* --- 响应式设计 (手机/平板) --- */
-@media (max-width: 900px) {
+/* --- 响应式设计 (Tablet & Mobile) --- */
+@media (max-width: 1024px) {
+  #content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .app-container {
     flex-direction: column;
+    padding-top: var(--header-height-mobile); /* 为 fixed header 留位 */
   }
 
-  /* 侧边栏变为顶部横向滚动导航 */
+  #mobile-header {
+    display: flex;
+  }
+  
+  .doc-header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* 侧边栏变为顶部导航条 */
   #sidebar {
+    position: fixed;
+    top: var(--header-height-mobile);
     width: 100%;
     height: auto;
-    position: sticky; /* 吸顶 */
-    top: 0;
+    background: var(--color-surface);
     border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    flex-direction: row; /* 横向排列 */
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    z-index: 40;
+    overflow-x: auto; /* 横向滚动 */
+    display: flex;
     align-items: center;
-    padding: 0;
-  }
-
-  .sidebar-header {
-    padding: 10px 15px;
-    position: static;
-    flex-shrink: 0;
-  }
-  
-  .sidebar-title {
-    font-size: 16px;
-  }
-
-  #sidebar nav {
-    padding: 0;
-    overflow-x: auto; /* 允许横向滚动 */
+    -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* iOS 顺滑滚动 */
-    scrollbar-width: none; /* 隐藏滚动条 (Firefox) */
+    box-shadow: var(--shadow-sm);
   }
-  
-  #sidebar nav::-webkit-scrollbar {
-    display: none; /* 隐藏滚动条 (Chrome/Safari) */
+
+  .sidebar-title-desktop {
+    display: none;
   }
 
   #sidebar ul {
     display: flex;
-    padding: 0 10px;
-    align-items: center;
-    height: 50px; /* 导航栏高度 */
+    flex-direction: row;
+    gap: 0.5rem;
   }
-
-  #sidebar li {
+  
+  #sidebar ul li {
     margin: 0;
-    margin-right: 5px;
   }
 
-  /* 隐藏二级菜单以简化移动端导航，或改为下拉（这里简化为隐藏，只留一级） */
-  /* 或者让它们也横向展示 */
   #sidebar ul ul {
-    display: none; 
+    display: none; /* 移动端隐藏二级菜单，保持清爽 */
   }
 
   #sidebar a {
-    padding: 6px 12px;
-    background: #f0f2f5;
-    border-radius: 20px; /* 胶囊样式 */
-    border-left: none;
-    font-size: 13px;
+    background: #f1f5f9;
+    padding: 0.4rem 1rem;
+    border-radius: 20px; /* 胶囊状 */
+    font-size: 0.8rem;
+    white-space: nowrap;
+    color: var(--color-text);
   }
 
   #sidebar a.active {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
 
-  /* 内容区调整 */
   #content {
-    margin-left: 0;
-    padding: 20px 15px;
+    padding: 2rem 1.25rem;
+    margin-top: 3.5rem; /* 留出侧滑栏高度 */
   }
 
-  .content-wrapper {
-    padding: 25px 20px;
-    box-shadow: none; /* 移动端去掉阴影更清爽 */
-    background: transparent;
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
-  
-  h1 { font-size: 26px; }
-  h2 { font-size: 20px; }
 }
